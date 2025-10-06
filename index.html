@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVANMARKET - Sistema de Gestión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "chart.js": "https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.js/+esm",
+            "jspdf": "https://cdn.jsdelivr.net/npm/jspdf@2.5.1/+esm",
+            "html2canvas": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/+esm",
+            "app/store": "./store.js",
+            "app/utils": "./utils.js",
+            "app/auth": "./auth.js",
+            "app/components/dashboard": "./components/dashboard.js",
+            "app/components/sales": "./components/sales.js",
+            "app/components/products": "./components/products.js",
+            "app/components/stock": "./components/stock.js",
+            "app/components/customers": "./components/customers.js",
+            "app/components/suppliers": "./components/suppliers.js",
+            "app/components/reports": "./components/reports.js",
+            "app/components/history": "./components/history.js",
+            "app/components/invoice": "./components/invoice.js",
+            "app/components/settings": "./components/settings.js",
+            "app/components/about": "./components/about.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="logo.png" alt="IVANMARKET Logo" class="logo-img" id="app-logo">
+                <h1 id="app-title">IVANMARKET</h1>
+            </div>
+            <div class="user-profile">
+                <i class="fas fa-user-circle"></i>
+                <span id="user-display"></span>
+                <button class="btn btn-secondary btn-sm" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Salir</button>
+            </div>
+        </header>
+
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#dashboard" class="nav-link active"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="#sales" class="nav-link"><i class="fas fa-cash-register"></i><span>Ventas</span></a></li>
+                <li><a href="#products" class="nav-link"><i class="fas fa-box-open"></i><span>Productos</span></a></li>
+                <li><a href="#stock" class="nav-link"><i class="fas fa-warehouse"></i><span>Stock</span></a></li>
+                <li><a href="#customers" class="nav-link"><i class="fas fa-users"></i><span>Clientes</span></a></li>
+                <li><a href="#suppliers" class="nav-link"><i class="fas fa-truck"></i><span>Proveedores</span></a></li>
+                <li><a href="#reports" class="nav-link"><i class="fas fa-chart-pie"></i><span>Reportes</span></a></li>
+                <li><a href="#history" class="nav-link"><i class="fas fa-history"></i><span>Historial</span></a></li>
+                <li><a href="#settings" class="nav-link"><i class="fas fa-cog"></i><span>Configuración</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span>Informate</span></a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content" id="main-content">
+            <!-- Contenido dinámico se renderizará aquí -->
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 IVANMARKET. Todos los derechos reservados. ¡Tu supermercado de confianza!</p>
+        </footer>
+    </div>
+
+    <div id="modal-container"></div>
+    <div id="toast-container"></div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
